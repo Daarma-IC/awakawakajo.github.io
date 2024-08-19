@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mau dikasih nama apa cok?</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" href="asset/tes.gif" type="gif">
+</head>
+<body>
+    <div class="body-b">
+    <nav class="navbar">
+        <!-- <a href="#" class="navbar-logo"><span>Darma</span></a> -->
+        <a href="#paragraph1" class="nav-link">About Me</a>
+        <a href="#porto" class="nav-link">Portofolio</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+</div>
+    <div class="body">
+        <div class="main-content">
+            <div id="paragraph1">
+                <strong>Interests</strong>
+                <br>
+                <ul>
+                    <li>Technology</li>
+                    <li>Music</li>
+                    <li>Traveling</li>
+                    <li>Reading</li>
+                </ul>
+                </div>
+                <div class="profile-info">
+                    <img src="asset/poto.png" alt="Foto Personal" width="120px" height="120px">
+                    <p>I'm a <span class="auto-type"></span></p>
+                  </div>
+                
+                  <script src="script.js"></script>
+
+            <div id="paragraph2">
+                <strong>About Me</strong>
+                <br>
+                Hello, My name Darma Al Gani. Iam an Engineering student, I am interested in learning about the field of electronics such as PCB, minimum systems, and I am also studying the basic programming
+                <br>
+                Furthermore, i'm proficient seizing opportunities and enjoy learning new things. Also I have a passion for focusing on the development of the network and combining it with the business world.
+            </div>
+
+            <div id="paragraph3">
+                <strong>Favorite Quote</strong>
+                <br>
+                "Time Can't Be Bought, Sometimes It Can Be Sold Anymore."
+            </div>
+            <div class="body">
+            <div id="porto">
+                <strong>Portfolio</strong>
+                    
+            <div class="porto-container">
+                <div class="porto-item">  
+                           
+                <div class="porto-item">
+                <h1>Navlight</h1>        
+                    <img src="asset/Navlight.png" alt="Lampu Kelap Kelip">
+                    <a href="asset/navlight.mp4" target="_blank">
+                <p><b>Click For Videos</b></p></a>             
+                    <p>I designed and built a custom navlight with components such as a transistor, pin headers (integrated to LED), resistors, and a JST connector. It has a built-in switch and can be controlled remotely. It offers 4 options: blink section, navlight, strobe, and beacon. The PCB is designed with an Atmega chip as the main component, without relying on an Arduino Pro Micro.</p>
+                     </div>  
+                    </div>
+                    <div class="coom">
+                      <p><strong>Coming Soon</strong></p>
+                </div>
+                </div>
+                </div>
+                <div id="contact">
+                    <p id="sa"><strong><i>Contact Me 
+                        <br>For More Information</i></strong></p>
+                    <div class="contact-item">
+                        <a href="mailto:darmaalgani@gmail.com" target="_blank">
+                            <img src="asset/email.gif" alt="Email"> 
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:+6289513829923" target="_blank">
+                            <img src="asset/phone.png" alt="Phone Number"> 
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/darma-al-gani-556456262/" target="_blank">
+                            <img src="asset/linkedin.jpeg" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/Daarma-IC" target="_blank">
+                            <img src="asset/github.png" alt="Github">
+                        </a>
+                        
+                    </div>
+                    <p id="saa"> <br>©without Copyright
+                        <br> MERDEKA</p>
+                </div>
+            </div>
+            
+            <script>
+                let links = document.querySelectorAll('nav ul li a'); 
+            
+                links.forEach(target => {
+                target.onclick = function(e) {
+                    e.preventDefault();
+                    let href = target.getAttribute('href');
+                    let offsetTop = document.querySelector(href).offsetTop;
+            
+                    scroll({
+                        top: offsetTop,
+                        behavior: "smooth"
+                    });
+                };
+                });
+            
+                var typed = new Typed(".auto-type",{
+                strings: ["farrel.", "rel.", "lele.", "arel."],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true,
+                });
+            </script>
+    <!-- Hubungkan ke file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

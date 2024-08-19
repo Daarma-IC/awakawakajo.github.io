@@ -1,25 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0px;
+    margin: 0px auto;
     padding: 1px;
+    height: 100vh;
     background: linear-gradient(135deg, #2e86c1 0%, #000 100%);
-    color: #972b2b;
-    
+    width: 90%;
     animation: gradientAnimation 10s ease infinite;
     animation: moveBackground 30s linear infinite;
     transition: cubic-bezier(0.6, 0.04, 0.98, 0.335) 0.5s ease-in-out;
 }
-@keyframes gradientAnimation {
-    30% {
-        background-position: 0% 50%;
-    }
-    500% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 20% 50%;
-    }
+html {
+    scroll-behavior:smooth;
 }
+
 .content {
     background-color: rgba(255, 255, 255, 0.85);
     max-width: 90%;
@@ -45,18 +38,11 @@ body {
     border-radius: 10px 10px 0 0;
     transition: background-color 0.3s ease;
 }
-
-.profile-info {
-    display: flex;
-    align-items: center;
-    padding: 40px;
-    background-color: transparent;
-    margin-bottom: 60px;
-    border-radius: 8px;
-    margin-top: 60px;
-    box-shadow: 0 4px 15px transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
 }
+
 
 .navbar {
     display: flex;
@@ -64,13 +50,19 @@ body {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     position: sticky;
-    top: 0px;
+    top: 0;
     width: 100%;
-    z-index: 100;
     transition: background-color 0.3s ease-in-out;
 }
-
-.nav-link {
+/* .navbar-logo {
+font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none; /* Menghilangkan garis bawah */
+    /* color: #fff; Pastikan warna teks sesuai dengan yang diinginkan */
+/* } */
+.nav-link  {
     color: #fff;
     padding: 10px 25px;
     text-decoration: none;
@@ -84,28 +76,43 @@ body {
     background-color: cyan;
     color: #000;
 }
-
-.profile-info:hover {
+.profile-info {
+    position: absolute; /* membuat elemen mengambang */
+    top: 12%; /* sesuaikan sesuai kebutuhan */
+    left: 85%; /* sesuaikan sesuai kebutuhan */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    width: 15   0px;
+    text-align: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-info:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.profile-info img {
+  }
+  
+  .profile-info img {
     margin-right: 20px;
     border-radius: 50%;
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
     transition: transform 0.3s ease;
-}
-
-.profile-info img:hover {
+  }
+  
+  .profile-info img:hover {
     transform: scale(1.1);
-}
-
-.profile-info p {
+  }
+  
+  .profile-info p {
     margin: 10px;
     font-size: 18px;
     color: #fff;
-}
+  }
+  
+  .auto-type {
+    font-weight: bold;
+    color: #b6895b;
+  }
 
 #paragraph1, #paragraph2, #paragraph3 {
     margin: 40px 0;
@@ -119,7 +126,7 @@ body {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
-
+a
 #paragraph1, #paragraph2 {
     font-size: 18px;
     font-family: Verdana, sans-serif;
@@ -134,7 +141,7 @@ body {
 }
 
 #contact {
-    margin: 0px auto;
+    margin: 10px auto;
     padding: 1% 40%;
     border-left: 5px solid cyan;
     border-right: 5px solid cyan;
@@ -149,8 +156,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 40px; */
-    font-size: 30px;
+    padding: 5px 9%;
+    font-size: 24px 9%;
+    margin: 10px;
+    margin-right: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #saa{
@@ -168,10 +177,10 @@ body {
 }
 
 .contact-item img {
-    width: 60px;
+    width: 35px;
     height: auto;
-    padding: 10px;
-    margin-right: 10px;
+    padding: 5px;
+    margin-right: 5px;
 }
 
 .contact-item a {
@@ -191,7 +200,8 @@ body {
 
 #porto, #coom {
     margin: 20px auto;
-  
+    position:sticky;
+    left: 90% 0px;
     padding: 1% 40%;
     background-color: transparent;
     align-items: left;
@@ -231,8 +241,9 @@ body {
 
 .porto-container {
     display: grid;
-    grid-template-columns: fr; /* Atur agar hanya ada satu kolom */
+    grid-template-columns: 1fr; /* Satu kolom pada layout grid */
     gap: 40px;
+    justify-content: start; /* Letakkan elemen di kiri */
 }
 
 .porto-item {
@@ -245,6 +256,7 @@ body {
     text-align: justify;
     box-shadow: 0 4px 15px rgba(34, 218, 197, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
 }
 
 .porto-item:hover {
